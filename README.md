@@ -20,3 +20,6 @@ The following must be installed prior to executing the code in this repository. 
 <LI>bbmerge
 </UL>
 </UL>
+
+## merging of paired-end reads
+
