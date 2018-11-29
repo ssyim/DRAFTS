@@ -17,5 +17,6 @@ The following must be installed prior to executing the code in this repository. 
 <LI>pandas
 <LI>numpy
 <LI>scipy
+<LI>bbmerge
 </UL>
 </UL>
