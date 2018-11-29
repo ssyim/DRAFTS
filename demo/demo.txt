@@ -1,1 +1,18 @@
-data and code to be added
+demo data (fastq, small library metadata) to be added
+
+in data (folder)
+1. Ec_DRAFTS_RS234_DNA_R1.fastq
+2. Ec_DRAFTS_RS234_DNA_R2.fastq
+3. Ec_DRAFTS_RS234_RNA_R1.fastq
+4. Ec_DRAFTS_RS234_RNA_R2.fastq
+5. Ec_cell_RS234_DNA_R1.fastq
+6. Ec_cell_RS234_DNA_R2.fastq
+7. Ec_cell_RS234_RNA_R1.fastq
+8. Ec_cell_RS234_RNA_R2.fastq
+9. RS234_library_info.csv
+
+in code (folder)
+1. merge R1&R2 pairs
+2. count barcodes for 
+3. calculate tx
+4. data comparison
