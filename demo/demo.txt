@@ -1,4 +1,4 @@
-demo data (fastq, small library metadata) to be added
+small dataset and code to demo to be added
 
 in data (folder)
 1. Ec_DRAFTS_RS234_DNA_R1.fastq
