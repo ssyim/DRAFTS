@@ -21,8 +21,8 @@ The following must be installed prior to executing the code in this repository. 
 </UL>
 </UL>
 
-## merging of paired-end reads
+## assembly of paired-end reads
 
-## merging of paired-end reads
+## error filtering and barcode counting
 
-## merging of paired-end reads
+## calculation of transcription levels
