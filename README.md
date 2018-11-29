@@ -18,11 +18,13 @@ The following must be installed prior to executing the code in this repository. 
 <LI>numpy
 <LI>scipy
 <LI>bbmerge
+<LI>matplotlib
+<LI>seaborn
 </UL>
 </UL>
 
-## assembly of paired-end reads
+## 1. assembly of paired-end reads
 
-## error filtering and barcode counting
+## 2. error filtering and barcode counting
 
-## calculation of transcription levels
+## 3. calculation of transcription levels
