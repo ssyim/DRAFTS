@@ -1,6 +1,6 @@
 # DRAFTS
 
-<big>DNA Regulatory element Analysis by cell-Free Transcription and Sequencing</big>
+DNA Regulatory element Analysis by cell-Free Transcription and Sequencing
 
 <p>Code and materials from paper "<b>Multiplex transcriptional characterizations across diverse and hybrid bacterial cell-free expression systems</b>" Yim SS<sup>*</sup>, Johns NI<sup>*</sup>, Park J, Gomes ALC, McBee RM, Richardson M, Ronda C, Chen SP, Garenne D, Noireaux V, Wang HH. JOURNAL TO BE UPDATED (YEAR TO BE UPDATED). <sup>*</sup>denotes equal contribution</p>
 
