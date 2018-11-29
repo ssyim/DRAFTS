@@ -2,7 +2,7 @@
 
 <big>DNA Regulatory element Analysis by cell-Free Transcription and Sequencing</big>
 
-<p>Code and materials from paper "<b>Multiplex transcriptional characterizations across diverse and hybrid bacterial cell-free expression systems</b>" Sung Sun Yim<sup>*</sup>, Nathan I. Johns<sup>*</sup>, Jimin Park, Antonio L.C. Gomes, Ross M. McBee, Miles Richardson, Carlotta Ronda, Sway P. Chen, David Garenne, Vincent Noireaux, Harris H. Wang. JOURNAL TO BE UPDATED (YEAR TO BE UPDATED) <sup>*</sup>Denotes equal contribution</p>
+<p>Code and materials from paper "<b>Multiplex transcriptional characterizations across diverse and hybrid bacterial cell-free expression systems</b>" Yim SS<sup>*</sup>, Johns NI<sup>*</sup>, Park J, Gomes ALC, McBee RM, Richardson M, Ronda C, Chen SP, Garenne D, Noireaux V, Wang HH. JOURNAL TO BE UPDATED (YEAR TO BE UPDATED) <sup>*</sup>Denotes equal contribution</p>
 
 <p>The full paper and supplementary information can be accessed <a href="http://wanglab.c2b2.columbia.edu/publications/">here</a>. [LINK TO BE UPDATED]</p>
 
