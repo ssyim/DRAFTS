@@ -6,6 +6,8 @@
 
 <p>The full paper and supplementary information can be accessed <a href="http://wanglab.c2b2.columbia.edu/publications/">here</a> [LINK TO BE UPDATED]</p>
 
+DEMO DATA AND CODES TO BE UPDATED
+
 ## dependencies
 The following must be installed prior to executing the code in this repository. For Python packages, it may be convenient to obtain these through a distribution such as Anaconda. Installation should only take a few minutes.
 <UL>
