@@ -23,7 +23,7 @@ The following must be installed prior to executing the code in this repository. 
 </UL>
 </UL>
 
-## 1. assembly of paired-end reads
+## 1. processing of raw sequencing data
 
 ## 2. error filtering and barcode counting
 
