@@ -3,6 +3,7 @@
 # Code to 1) compute abundances of DNA and RNA barcode counts and 2) transcription levels
 
 import os, sys
+from multiprocessing import Pool as ThreadPool
 
 import pandas as pd
 import numpy as np
@@ -62,13 +63,15 @@ RNA_file_list = natsorted(RNA_file_list)
 def compute_tx(file_DNA, file_RNA):
 
 	counts = []
-	counts.append(filter_lib(file_DNA, lib_key)).append(filter_lib(file_RNA, lib_key))
-
+	counts.append(filter_lib(file_DNA, lib_key))
+	counts.append(filter_lib(file_RNA, lib_key))
 	combined_counts = pd.concat(counts, axis=1)
+	
 	colnames = []
-	for names in files:
-		nlist = names.split('/')[-1].split('_bccounts.csv')
-		colnames.append(n)
+	DNA_col_name = file_DNA.split('/')[-1].split('_bccounts.csv')[0]
+	RNA_col_name = file_RNA.split('/')[-1].split('_bccounts.csv')[0]
+	colnames.append(DNA_col_name)
+	colnames.append(RNA_col_name)
 	combined_counts.columns = colnames
 
 	n_tx = '_'.join([combined_counts.columns[0],combined_counts.columns[1],'tx'])
