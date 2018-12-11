@@ -1,5 +1,0 @@
-3 simple codes to be added
-
-1. merge_reads.py (to merge R1 and R2)
-2. count_barcodes.py (to filter reads with lowq, count barcodes)
-3. norm_tx.py (to calculate tx from barcode counts)
