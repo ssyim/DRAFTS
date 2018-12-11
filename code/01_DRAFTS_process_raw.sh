@@ -15,7 +15,7 @@ out_dir="$2"
 
 if [ -z "${search_dir}" ]; then # if no args, output usgae and exit
 	echo "Usage:"
-	echo "./01_DRAFTS_find_unzip_merge_raw.sh [dir_to_search] [out_dir (optional)]"
+	echo "./01_DRAFTS_process_raw.sh [dir_to_search] [out_dir (optional)]"
 	exit 1
 fi
 

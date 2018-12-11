@@ -54,12 +54,14 @@ try:
     
     # [important]
     # out_dir should have
-    # a folder named 01_bccounts
+    # a folder named 01_bccounts with 2 empty folders insde named [01_dna_bccounts, 02_rna_bccounts]
     # and another folder named 02_log with 10 empty folders inside named [01_bccounts, 02_lowq, 03_missingadapter, 04_badbc, 05_goodbc_badalign, 06_frag, 07_goodbc_perfectalign, 08_goodbc_goodalign, 09_goodbc_perfectalign_bccounts, 10_goodbc_goodalign_bccounts, 11_log_files]
+
+num_threads = 36 # Number of threads for later multi-threading
 
 except IndexError:
     print ("Usage:")
-    print ("./02_DRAFTS_data_extraction.py [ref_csv] [dna_directory] [rna_directory] [out_directory]")
+    print ("./02_DRAFTS_extract_data.py [ref_csv] [dna_directory] [rna_directory] [out_directory]")
     exit(1)
 
 # read library metadata 
@@ -202,11 +204,11 @@ def parse_dna(file):
     print("goodbc_perfectalignment count: " + str(goodbc_perfectalign_count) + " = " + "{0:.2f}".format(float(goodbc_perfectalign_count/count)))
     print("")
 
-    filename = file.split("/")[-1].split(".")[0]    
+    filename = file.split("/")[-1].split("-merged.fastq")[0]    
     d = pd.DataFrame(list(combined_bccounts.items()), columns = ['Barcode', 'Counts'])
     d = d.set_index('Barcode')
-    d.to_csv(out_dir+"/01_bccounts/" + filename + "_bccounts.csv")
-    d2 = pd.read_csv(out_dir+"/01_bccounts/" + filename + "_bccounts.csv")
+    d.to_csv(out_dir+"/01_bccounts/01_dna_bccounts/" + filename + "_bccounts.csv")
+    d2 = pd.read_csv(out_dir+"/01_bccounts/01_dna_bccounts/" + filename + "_bccounts.csv")
 
     BC = ""
     BC_lst = []
@@ -215,7 +217,7 @@ def parse_dna(file):
         BC = ''.join(BC)
         BC_lst.append(BC)
     d2['Barcode'] = BC_lst
-    d2.to_csv(out_dir+"/01_bccounts/" + filename + "_bccounts.csv", index=False)
+    d2.to_csv(out_dir+"/01_bccounts/01_dna_bccounts/" + filename + "_bccounts.csv", index=False)
     
     #write to files
     write_dict(combined_bccounts,out_dir+"/02_log/01_bccounts/" + filename + ".txt")
@@ -246,7 +248,7 @@ def parse_dna(file):
         
     print("Parsing of " + file + " finished at:" + str(datetime.now()))
 
-pool = ThreadPool(36)
+pool = ThreadPool(num_threads)
 pairwise_results = pool.map(parse_dna,DNA_file_list)
 pool.close()
 pool.join()
@@ -360,11 +362,11 @@ def parse_rna(file):
 	print("goodbc_perfectalignment count: " + str(goodbc_perfectalign_count) + " = " + "{0:.2f}".format(float(goodbc_perfectalign_count/count)))
 	print("")
 
-	filename = file.split("/")[-1].split(".")[0]    
+	filename = file.split("/")[-1].split("-merged.fastq")[0]    
 	d = pd.DataFrame(list(combined_bccounts.items()), columns = ['Barcode', 'Counts'])
 	d = d.set_index('Barcode')
-	d.to_csv(out_dir+"/01_bccounts/" + filename + "_bccounts.csv")
-	d2 = pd.read_csv(out_dir+"/01_bccounts/" + filename + "_bccounts.csv")
+	d.to_csv(out_dir+"/01_bccounts/02_rna_bccounts/" + filename + "_bccounts.csv")
+	d2 = pd.read_csv(out_dir+"/01_bccounts/02_rna_bccounts/" + filename + "_bccounts.csv")
 
 	BC = ""
 	BC_lst = []
@@ -373,7 +375,7 @@ def parse_rna(file):
 		BC = ''.join(BC)
 		BC_lst.append(BC)
 	d2['Barcode'] = BC_lst
-	d2.to_csv(out_dir+"/01_bccounts/" + filename + "_bccounts.csv", index=False)
+	d2.to_csv(out_dir+"/01_bccounts/02_rna_bccounts/" + filename + "_bccounts.csv", index=False)
     
     #write to files
 	write_dict(combined_bccounts,out_dir+"/02_log/01_bccounts/" + filename + ".txt")
@@ -404,7 +406,7 @@ def parse_rna(file):
 
 	print("Parsing of " + file + " finished at:" + str(datetime.now()))
 
-pool = ThreadPool(36)
+pool = ThreadPool(num_threads)
 pairwise_results = pool.map(parse_rna,RNA_file_list)
 pool.close()
 pool.join()  
