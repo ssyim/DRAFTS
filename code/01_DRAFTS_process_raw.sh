@@ -5,7 +5,7 @@
 # 3) then BBmerge of paired-end reads
 
 # expects nextseq/miseq raw data, which means each folder has 2 files of R1 and R2 (paired-end reads)
-# and files sequenced from different lanes of nextseq flowcells are separated in four different folders labeled with _L00n
+# and files sequenced from different lanes of flowcell are separated in four different folders labeled with _L00n
 
 # assumes foldernames are Samplename_L001_*, Samplename_L002_*, Samplename_L003_*, or Samplename_L004_*
 # Samplename here is SampleID for each sample in the sample sheet for illumna sequencing run
