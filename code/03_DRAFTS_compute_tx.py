@@ -17,7 +17,7 @@ def filter_lib(file, library):
 	filter_key = read.loc[library.index] #filtering library barcodes	
 	return filter_key
 
-def filter_tx_log10(file, library)
+def filter_tx_log10(file, library):
 	read = pd.read_csv(file,index_col="Barcode")
 	tx_log10 = read[read.columns[-1]]
 	filter_key = tx_log10.loc[library.index] #filtering library barcodes	
