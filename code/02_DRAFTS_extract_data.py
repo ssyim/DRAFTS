@@ -57,12 +57,13 @@ try:
     # a folder named 01_bccounts with 2 empty folders insde named [01_dna_bccounts, 02_rna_bccounts]
     # and another folder named 02_log with 10 empty folders inside named [01_bccounts, 02_lowq, 03_missingadapter, 04_badbc, 05_goodbc_badalign, 06_frag, 07_goodbc_perfectalign, 08_goodbc_goodalign, 09_goodbc_perfectalign_bccounts, 10_goodbc_goodalign_bccounts, 11_log_files]
 
-num_threads = 36 # Number of threads for later multi-threading
-
 except IndexError:
     print ("Usage:")
     print ("./02_DRAFTS_extract_data.py [ref_csv] [dna_directory] [rna_directory] [out_directory]")
     exit(1)
+
+# number of threads for later multi-threading
+num_threads = 36
 
 # read library metadata 
 lib = pd.read_csv(ref_csv, index_col = "Barcode") # barcode sequences in metadata is reverse complemented
