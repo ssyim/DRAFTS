@@ -25,7 +25,9 @@ The following must be installed prior to executing the code in this repository. 
 
 ## 1. processing of raw sequencing data
 <p>run 01_DRAFTS_process_raw.sh 1) to find and combine raw nextseq data in search_dir, 2) unzip them to the out_dir, 3) then assemble paired-end reads</p>
-<p>$ 01_DRAFTS_process_raw.sh [search_dir] [out_dir (optional)]</p>
+```
+01_DRAFTS_process_raw.sh [search_dir] [out_dir (optional)]
+```
 
 ## 2. error filtering and barcode counting
 
