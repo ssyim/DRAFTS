@@ -17,10 +17,10 @@ The following must be installed prior to executing the code in this repository. 
 <LI>pandas
 <LI>numpy
 <LI>scipy
-<LI>bbmerge
 <LI>matplotlib
 <LI>seaborn
 </UL>
+<LI>bbmerge
 </UL>
 
 ## 1. processing of raw sequencing data
