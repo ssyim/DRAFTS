@@ -34,7 +34,7 @@ Samplename here is SampleID for each sample in the sample sheet for illumna sequ
 ```
 sudo bash 01_DRAFTS_process_raw.sh [search_dir] [out_dir (optional)]
 ```
-after running `01_DRAFTS_process_raw.sh`, it is easier to group DNA-seq and RNA-seq reads separately for further analysis
+after running `01_DRAFTS_process_raw.sh`, group DNA-seq and RNA-seq reads in seperate folders for further analysis
 
 ## 2. error filtering and barcode counting
 run `02_DRAFTS_extract_data.py` to 1) filter errors in oligo library synthesis or sequencing, 2) extract barcode counts and 3) other info for qc or additional analysis
