@@ -24,12 +24,35 @@ The following must be installed prior to executing the code in this repository. 
 </UL>
 
 ## 1. processing of raw sequencing data
-<p>run 01_DRAFTS_process_raw.sh 1) to find and combine raw nextseq data in search_dir, 2) unzip them to the out_dir, 3) then assemble paired-end reads</p>
+run `01_DRAFTS_process_raw.sh` 1) to find and combine raw nextseq data in search_dir, 2) unzip them to the out_dir, then 3) assemble paired-end reads
+
+`01_DRAFTS_process_raw.sh`
+- expects nextseq/miseq raw data folder, where each folder has 2 files of R1 and R2 (paired-end reads) and files sequenced from different lanes of flowcell are separated in four different folders labeled with _L00n
+- assumes foldernames are Samplename_L001_*, Samplename_L002_*, Samplename_L003_*, or Samplename_L004_*
+Samplename here is SampleID for each sample in the sample sheet for illumna sequencing run
 
 ```
 sudo bash 01_DRAFTS_process_raw.sh [search_dir] [out_dir (optional)]
 ```
+after running `01_DRAFTS_process_raw.sh`, it is easier to group DNA-seq and RNA-seq reads separately for further analysis
 
 ## 2. error filtering and barcode counting
+run `02_DRAFTS_extract_data.py` to 1) filter errors in oligo library synthesis or sequencing, 2) extract barcode counts and 3) other info for qc or additional analysis
+
+`02_DRAFTS_extract_data.py`
+- out_dir should contain a folder named 01_bccounts with 2 empty folders insde named [01_dna_bccounts, 02_rna_bccounts],
+- and a folder named 02_log with 10 empty folders inside named [01_bccounts, 02_lowq, 03_missingadapter, 04_badbc, 05_goodbc_badalign, 06_frag, 07_goodbc_perfectalign, 08_goodbc_goodalign, 09_goodbc_perfectalign_bccounts, 10_goodbc_goodalign_bccounts, 11_log_files]
+
+```
+sudo python 02_DRAFTS_extract_data.py [ref_csv] [dna_directory] [rna_directory] [out_dir]
+```
 
 ## 3. calculation of transcription levels
+run `03_DRAFTS_compute_tx.py` to 1) compute abundances of DNA and RNA barcode counts and 2) transcription levels
+
+`03_DRAFTS_compute_tx.py`
+- out_dir should contain a folder named 01_tx
+
+```
+sudo python 03_DRAFTS_compute_tx.py [ref_csv] [dna_bc_directory] [rna_bc_directory] [out_dir]
+```
