@@ -35,7 +35,7 @@ try:
 
 except IndexError:
     print ("Usage:")
-    print ("./03_DRAFTS_compute_tx.py [ref_csv] [dna_bc_directory] [rna_bc_directory] [out_directory]")
+    print ("./03_DRAFTS_compute_tx.py [ref_csv] [dna_bc_directory] [rna_bc_directory] [out_dir]")
     exit(1)
 
 # read reference barcodes of library

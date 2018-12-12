@@ -59,7 +59,7 @@ try:
 
 except IndexError:
     print ("Usage:")
-    print ("./02_DRAFTS_extract_data.py [ref_csv] [dna_directory] [rna_directory] [out_directory]")
+    print ("./02_DRAFTS_extract_data.py [ref_csv] [dna_directory] [rna_directory] [out_dir]")
     exit(1)
 
 # number of threads for later multi-threading
