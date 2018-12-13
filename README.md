@@ -37,7 +37,7 @@ sudo bash 01_DRAFTS_process_raw.sh [search_dir] [out_dir (optional)]
 after running `01_DRAFTS_process_raw.sh`, group DNA-seq and RNA-seq reads in seperate folders for further analysis
 
 ## 2. error filtering and barcode counting
-run `02_DRAFTS_extract_data.py` to 1) filter errors in oligo library synthesis or sequencing, 2) extract barcode counts and 3) other info for qc or additional analysis
+run `02_DRAFTS_extract_data.py` to 1) filter errors in oligo library synthesis or sequencing, 2) extract barcode counts and 3) other info for qc and additional analysis
 
 `02_DRAFTS_extract_data.py`
 - out_dir should contain a folder named 01_bccounts with 2 empty folders insde named [01_dna_bccounts, 02_rna_bccounts],
