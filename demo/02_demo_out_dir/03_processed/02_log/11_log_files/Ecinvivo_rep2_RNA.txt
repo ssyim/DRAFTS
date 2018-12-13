@@ -1,0 +1,8 @@
+total count: 93607
+lowq count: 144 = 0.00
+missing_adapter count: 8072 = 0.09
+frag count: 7975 = 0.09
+badbc count: 28271 = 0.30
+goodbc_badalignment count: 3242 = 0.03
+goodbc_goodalignment count: 34271 = 0.37
+goodbc_perfectalignment count: 11632 = 0.12

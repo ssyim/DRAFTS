@@ -26,12 +26,7 @@ fi
 echo "Combining files of same samples into ${out_dir}"
 find "${search_dir}" -mindepth 1 -type d \( -not -iname ".*" \) | \
 while read -r dn; do
-
-	fn=$(echo $dn | rev | cut -f1 -d"/" | rev)
-	fn=${fn/_L00/#}
-	fn=$(echo "$fn" | cut -f1 -d"#" )
-	# echo "$fn"
-
+	fn=$(echo $dn | rev | cut -f1 -d"/" | cut -f2- -d"_" | rev)
     cat "$dn"/*R1*.fastq.gz >> $out_dir/"$fn"_R1.fastq.gz
     cat "$dn"/*R2*.fastq.gz >> $out_dir/"$fn"_R2.fastq.gz
 done
@@ -43,9 +38,9 @@ while read -r fn; do
 done
 
 echo "Merging paired-end reads"
-find "${out_dir}" -mindepth 1 -type f \( -not -iname ".*" \) | rev | cut -f1 -d"/" | rev | sed 's/_R./#/g' | cut -f1 -d"#" | sort -u |\
+find "${out_dir}" -mindepth 1 -type f \( -not -iname ".*" \) | rev | cut -f1 -d"/" | cut -f2- -d"_" | rev | sort -u | \
 while read -r fn; do
-	sudo bash */bbmap/bbmerge.sh in1=$out_dir/"$fn"_R2.fastq in2=$out_dir/"$fn"_R1.fastq out=$out_dir/"$fn"-merged.fastq outu1=$out_dir/unmerged-"$fn"-R2.fastq outu2=$out_dir/unmerged-"$fn"-R1.fastq
+	sudo bash */bbmap/bbmerge.sh in1=$out_dir/"$fn"_R2.fastq in2=$out_dir/"$fn"_R1.fastq out=$out_dir/"$fn"-merged.fastq # outu1=$out_dir/unmerged-"$fn"-R2.fastq outu2=$out_dir/unmerged-"$fn"-R1.fastq
 	rm -f $out_dir/"$fn"_R1.fastq $out_dir/"$fn"_R2.fastq
 done
 

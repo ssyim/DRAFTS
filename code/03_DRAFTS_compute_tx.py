@@ -108,7 +108,6 @@ tx_file_list = natsorted(tx_file_list)
 tx_log10 = []
 for file in tx_file_list:
     tx_log10.append(filter_tx_log10(file, lib_key))
-# print (tx_log10)
 
 # combining all data
 combined_tx_log10 = pd.concat(tx_log10, axis=1)
