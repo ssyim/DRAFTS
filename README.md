@@ -32,7 +32,7 @@ Samplename here is SampleID for each sample in the sample sheet for illumna sequ
 run `01_DRAFTS_process_raw.sh` 1) to find and combine raw nextseq data in search_dir, 2) unzip them to the out_dir, then 3) assemble paired-end reads
 
 ```
-sudo bash 01_DRAFTS_process_raw.sh [search_dir] [out_dir (optional)]
+bash 01_DRAFTS_process_raw.sh [search_dir] [out_dir (optional)]
 ```
 after running `01_DRAFTS_process_raw.sh`, group DNA-seq and RNA-seq reads in seperate folders for further analysis
 
@@ -44,7 +44,7 @@ after running `01_DRAFTS_process_raw.sh`, group DNA-seq and RNA-seq reads in sep
 run `02_DRAFTS_extract_data.py` to 1) filter errors in oligo library synthesis or sequencing, 2) extract barcode counts and 3) other info for qc and additional analysis
 
 ```
-sudo python 02_DRAFTS_extract_data.py [ref_csv] [dna_directory] [rna_directory] [out_dir]
+python 02_DRAFTS_extract_data.py [ref_csv] [dna_directory] [rna_directory] [out_dir]
 ```
 
 ## 3. calculation of transcription levels
@@ -54,5 +54,5 @@ sudo python 02_DRAFTS_extract_data.py [ref_csv] [dna_directory] [rna_directory] 
 run `03_DRAFTS_compute_tx.py` to 1) compute abundances of DNA and RNA barcode counts and 2) transcription levels
 
 ```
-sudo python 03_DRAFTS_compute_tx.py [ref_csv] [dna_bc_directory] [rna_bc_directory] [out_dir]
+python 03_DRAFTS_compute_tx.py [ref_csv] [dna_bc_directory] [rna_bc_directory] [out_dir]
 ```
