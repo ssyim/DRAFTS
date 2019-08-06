@@ -2,7 +2,7 @@
 
 DNA Regulatory element Analysis by cell-Free Transcription and Sequencing
 
-<p>Code and materials from paper "<b>Multiplex transcriptional characterizations across diverse and hybrid bacterial cell-free expression systems</b>" Yim SS<sup>*</sup>, Johns NI<sup>*</sup>, Park J, Gomes ALC, McBee RM, Richardson M, Ronda C, Chen SP, Garenne D, Noireaux V, Wang HH. JOURNAL TO BE UPDATED (YEAR TO BE UPDATED). <sup>*</sup>denotes equal contribution</p>
+<p>Code and materials from paper "<b>Multiplex transcriptional characterizations across diverse bacterial species using cell-free systems</b>" Yim SS<sup>*</sup>, Johns NI<sup>*</sup>, Park J, Gomes ALC, McBee RM, Richardson M, Ronda C, Chen SP, Garenne D, Noireaux V, Wang HH. Molecular Systems Biology (2019). <sup>*</sup>denotes equal contribution</p>
 
 <p>The full paper and supplementary information can be accessed <a href="http://wanglab.c2b2.columbia.edu/publications/">here</a>. [LINK TO BE UPDATED]</p>
 
