@@ -2,9 +2,9 @@
 
 DNA Regulatory element Analysis by cell-Free Transcription and Sequencing
 
-<p>Code and materials from paper "<b>Multiplex transcriptional characterizations across diverse bacterial species using cell-free systems</b>" Yim SS<sup>*</sup>, Johns NI<sup>*</sup>, Park J, Gomes ALC, McBee RM, Richardson M, Ronda C, Chen SP, Garenne D, Noireaux V, Wang HH. Molecular Systems Biology (2019). <sup>*</sup>denotes equal contribution</p>
+<p>Code and materials from paper "<b>Multiplex transcriptional characterizations across diverse bacterial species using cell-free systems</b>" Yim SS<sup>*</sup>, Johns NI<sup>*</sup>, Park J, Gomes ALC, McBee RM, Richardson M, Ronda C, Chen SP, Garenne D, Noireaux V, Wang HH. Molecular Systems Biology (2019) 15, e8875. <sup>*</sup>denotes equal contribution</p>
 
-<p>The full paper and supplementary information can be accessed <a href="http://wanglab.c2b2.columbia.edu/publications/">here</a>. [LINK TO BE UPDATED]</p>
+<p>The full paper and supplementary information can be accessed <a href="https://www.embopress.org/doi/10.15252/msb.20198875">here</a>.</p>
 
 <p>Raw sequencing data can be found at NCBI SRA under <a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA509603">PRJNA509603</a>.</p>
 
